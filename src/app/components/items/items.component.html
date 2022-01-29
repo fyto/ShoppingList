@@ -1,7 +1,7 @@
 <div class="main-container">
     <!-- [item]="item" (Pasa la información de entrada al componente app-item) -->
     <!-- (deleteItem)="deleteItem($event)" (Especifica el evento) - $event se traduce en item -->
-    <app-total message="Total a pagar: " [total]="total"></app-total>
+    <app-total [total]="total"></app-total>
     <app-item 
         *ngFor="let item of items" 
         [item]="item"       

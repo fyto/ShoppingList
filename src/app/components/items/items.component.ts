@@ -7,6 +7,7 @@ import { ItemService } from 'src/app/services/item.service';
   templateUrl: './items.component.html',
   styleUrls: ['./items.component.css']
 })
+
 export class ItemsComponent implements OnInit {
 
   items: Item[] = [];
@@ -19,22 +20,24 @@ export class ItemsComponent implements OnInit {
 
   ngOnInit(): void 
   {
-    this.items = this.itemService.getItems();
-
-    console.log(this.items);
-
-    this.getTotal();
+    this.itemService.getItems().subscribe(data => {
+      this.items = data;
+      this.getTotal();
+    })   
   }
 
   deleteItem(item: Item)
   {
     this.items = this.items.filter(i => i.id != item.id)
 
+    this.itemService.deleteItem(item).subscribe();
+
     this.getTotal();
   }
 
   toggleItem(item:Item)
   {
+    this.itemService.toggleItem(item).subscribe();
     this.getTotal();
   }
 

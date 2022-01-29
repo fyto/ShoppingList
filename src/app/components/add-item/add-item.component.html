@@ -1,24 +1,44 @@
-<form action="" (ngSubmit)="onSubmit()">
-    <h2>Ingresar nuevo artículo</h2>
+<!-- <form action="" (ngSubmit)="onSubmit()" style="margin-top: 15px;">
+    <h2>Ingresar artículo</h2>
     <div class="form-group">
-        <label for="name">Id:</label>
-        <input type="text" id="" name="id" [(ngModel)]="id">
+        <label for="id">Id:</label>
+        <input type="text" id="" name="id" class="form-control" [(ngModel)]="id">
     </div>
 
     <div class="form-group">
         <label for="name">Nombre:</label>
-        <input type="text" id="" name="name" [(ngModel)]="title">
+        <input type="text" id="" name="name" class="form-control" [(ngModel)]="title">
     </div>
 
     <div class="form-group">
         <label for="price">Precio:</label>
-        <input type="text" id="" name="price" [(ngModel)]="price">
+        <input type="text" id="" name="price" class="form-control" [(ngModel)]="price">
     </div>
 
     <div class="form-group">
         <label>Cantidad:</label>
-        <input type="text" id="" name="quantity" [(ngModel)]="quantity">
+        <input type="text" id="" name="quantity" class="form-control" [(ngModel)]="quantity">
     </div>
 
-    <input type="submit" value="Agregar">
-</form>
+    <input type="submit" class="btn btn-primary" value="Agregar" style="width: 100%; margin-top: 10px;">
+</form> -->
+
+<form (ngSubmit)="onSubmit()" style="margin-top: 35px;">
+    
+    <div class="form-group">
+      <label for="" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Nombre</label>
+      <input type="text" class="form-control" id="" name="name" placeholder="Ingrese nombre" [(ngModel)]="title">
+    </div>
+
+    <div class="form-group">
+      <label for=""  style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Precio</label>
+      <input type="text" class="form-control" id="" name="price" placeholder="Ingrese precio" [(ngModel)]="price">
+    </div>
+
+    <div class="form-group">
+        <label for=""  style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Cantidad</label>
+        <input type="text" class="form-control" id="" name="quantity" placeholder="Ingrese cantidad" [(ngModel)]="quantity">
+      </div>
+
+      <input type="submit" class="btn btn-primary" value="Agregar" style="width: 100%; margin-top: 20px;">
+  </form>

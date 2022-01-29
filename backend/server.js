@@ -10,17 +10,24 @@ app.use(express.json());
 
 let items = [];
 
-app.get('/', (req, res) => {
+app.get('/', (req, res) => 
+{    
     res.send('Servidor de prueba');
 });
-app.get('/items', async (req, res) => {
+
+app.get('/items', async (req, res) => 
+{
     await open();
     res.json(items);
 });
-app.get('/items/:id', (req, res) => {
+
+app.get('/items/:id', (req, res) => 
+{
     res.send(`${req.params.id}`);
 });
-app.put('/items/:id', async (req, res) => {
+
+app.put('/items/:id', async (req, res) => 
+{
     const id = req.params.id;
     await open();
     const index = items.findIndex(item => item.id === id);
@@ -46,19 +53,19 @@ app.post('/items', async (req, res) => {
     res.json(req.body);
 });
 
-async function save(){
+async function save()
+{
     const res = await writeFile('data.json', JSON.stringify(items), 'utf-8');
 }
 
-async function open(){
+async function open()
+{
     const res = await readFile('data.json', 'utf-8');
     items = JSON.parse(res);
     console.log('open',items);
 }
 
-
-
-
-app.listen(3000, () => {
+app.listen(3000, () => 
+{
     console.log('servidor iniciado...');
 });

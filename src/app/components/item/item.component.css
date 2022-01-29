@@ -1,6 +1,6 @@
 .row{
     box-sizing: border-box;
-    display: flex;
+    /* display: flex; */
     align-items: center;
 }
 .row:hover{
@@ -16,7 +16,7 @@ div{
 }
 .title{
     display: flex;
-    width: 50%;
+    width: 30%;
     padding: 0 5px;
 }
 .price{
@@ -33,26 +33,29 @@ div{
 .total{
     width: 15%;
     font-weight: bolder;
-    color: green;
+    color: rgb(3, 161, 3);
     padding: 0 5px;
 }
-.actions{
-    width: 10%;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 0 5px;
-}
-.actions button{
+
+.button-column{
     border: none;
     font-size: 12px;
-    background-color: red;
     color: white;
     padding: 5px;
-    width: 100%;
+    width: 40%;
     box-sizing: border-box;
+    margin-left: 3px;
+    margin-right: 3px;
 }
-.actions button:hover{
+.button-hover-danger:hover{
     background-color: darkred;
+}
+.button-hover-primary:hover{
+    background-color: rgb(12, 13, 112);
+}
+
+.input-checkbox{
+    margin-right: 10px;
 }
 
 @media screen and (max-width: 480px){

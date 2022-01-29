@@ -3,9 +3,7 @@ form{
     width: 300px;
     display: block;
 }
-form div{
-    padding: 5px 0;
-}
+
 
 form label{
     display: block;
