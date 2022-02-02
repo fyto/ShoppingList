@@ -24,10 +24,23 @@
 </form> -->
 
 <form (ngSubmit)="onSubmit()" style="margin-top: 35px;">
-    
+
     <div class="form-group">
-      <label for="" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Nombre</label>
-      <input type="text" class="form-control" id="" name="name" placeholder="Ingrese nombre" [(ngModel)]="title">
+        <label for="" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Nombre</label>
+        <input type="text" class="form-control" id="" name="name" placeholder="Ingrese nombre" [(ngModel)]="title">
+      </div>
+
+    <div class="form-group">
+        <label for="" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Mes</label>
+        <select class="form-control">
+            <option selected>Ingrese un mes</option>
+            <option value="1">Enero - 2021</option>
+            <option value="2">Febrero - 2021</option>
+            <option value="3">Marzo - 2021</option>
+            <option value="1">Enero - 2022</option>
+            <option value="2">Febrero - 2022</option>
+            <option value="3">Marzo - 2022</option>
+          </select>
     </div>
 
     <div class="form-group">

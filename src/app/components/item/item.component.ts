@@ -6,6 +6,7 @@ import { Item } from 'src/app/models/item';
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.css']
 })
+
 export class ItemComponent implements OnInit {
 
   @Input() item: Item = new Item();

@@ -9,6 +9,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 let items = [];
+let months = [];
 
 app.get('/', (req, res) => 
 {    
@@ -19,6 +20,12 @@ app.get('/items', async (req, res) =>
 {
     await open();
     res.json(items);
+});
+
+app.get('/months', async (req, res) => 
+{
+    await openMonth();
+    res.json(months);
 });
 
 app.get('/items/:id', (req, res) => 
@@ -35,6 +42,7 @@ app.put('/items/:id', async (req, res) =>
     await save();
     res.json(items[index]);
 });
+
 app.delete('/items/:id', async (req, res) => {
     const id = req.params.id;
     await open();
@@ -62,7 +70,13 @@ async function open()
 {
     const res = await readFile('data.json', 'utf-8');
     items = JSON.parse(res);
-    console.log('open',items);
+}
+
+async function openMonth()
+{   
+    const res = await readFile('data.json', 'utf-8');
+  
+    items = JSON.parse(res);
 }
 
 app.listen(3000, () => 

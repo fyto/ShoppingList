@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from 'src/app/models/item';
+import { Month } from 'src/app/models/month';
 import { ItemService } from 'src/app/services/item.service';
+
 
 @Component({
   selector: 'app-items',
@@ -11,11 +13,13 @@ import { ItemService } from 'src/app/services/item.service';
 export class ItemsComponent implements OnInit {
 
   items: Item[] = [];
+  months: Month[] = [];
+
   total: number = 0;
 
   constructor(private itemService: ItemService) 
   {
-
+   
   }
 
   ngOnInit(): void 
@@ -47,7 +51,6 @@ export class ItemsComponent implements OnInit {
                             .map(item => item.quantity * item.price)
                             .reduce( (acumulador, item) => acumulador += item, 0)
   }
-
-  
+ 
 
 }

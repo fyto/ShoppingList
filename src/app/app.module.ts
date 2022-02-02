@@ -9,7 +9,9 @@ import { ItemComponent } from './components/item/item.component';
 import { TotalComponent } from './components/total/total.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { TotalCreditoComponent } from './components/total-credito/total-credito.component';
+import { MesComponent } from './components/mes/mes.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http'
     ItemsComponent,
     ItemComponent,
     TotalComponent,
-    AddItemComponent
+    AddItemComponent,
+    TotalCreditoComponent,
+    MesComponent
   ],
   imports: [
     BrowserModule,

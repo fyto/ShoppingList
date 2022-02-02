@@ -1,6 +1,8 @@
 .container{
-    text-align: center;
-    padding: 10px 0;
+    text-align: center;   
+    width: 90%;  
+    margin-top: 10px; 
+    margin-bottom: 10px;
 }
 
 h2{

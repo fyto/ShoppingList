@@ -5,3 +5,7 @@ body
     padding: 0;
     margin: 0;
 }
+
+.active-menu{
+    font-weight: bolder;
+}

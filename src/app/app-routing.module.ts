@@ -5,7 +5,7 @@ import { AddItemComponent } from './components/add-item/add-item.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path:'home',
     component: ItemsComponent
   },
   {

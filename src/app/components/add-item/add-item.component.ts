@@ -34,7 +34,7 @@ export class AddItemComponent implements OnInit {
     item.completed = false;
 
     this.itemService.addItem(item).subscribe(i => {
-       this.router.navigate(['/']);
+       this.router.navigate(['/home']);
     });
   
   }
